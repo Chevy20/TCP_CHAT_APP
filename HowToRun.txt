@@ -1,0 +1,13 @@
+Welcome to My TCP Chat application.
+
+To start this you must run server first by typing into the command prompt "python3 server.py"
+
+This will initialize the server and report a port number, portNumber, for clients to connect to. You will need this to start the chat client.
+
+To start the chat client, type in the command prompt "python3 client.py username chat://localhost:portNumber", where username is the username you wish to be idenified by 
+and portNumber is the port number that the server reports that it is listening on. 
+
+For example, is the server reports it is listening on port 12345 and my username is Bob, I would start the client as follows:
+
+python3 client.py bob chat://localhost:12345
+
