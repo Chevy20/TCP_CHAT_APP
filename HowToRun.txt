@@ -11,3 +11,12 @@ For example, is the server reports it is listening on port 12345 and my username
 
 python3 client.py bob chat://localhost:12345
 
+Commands:
+!exit - exits the current terminal. Only works for clients
+!follow <term> - follows the term or user specified. To follow a user, must be prefaced by @. For example, @user
+!unfollow <term> - unfollows the specified term
+!list - lists the current users in the server 
+!attach <filename> <terms> - Uploads a file to the server with specified filename. It gets sent to anyone that follows a term in <terms>. For example, if 
+user bob follows the term apple, and the command typed is !attach file.txt apple, the file will get sent to anyone following the term apple. In this case, it would be bob.
+
+
