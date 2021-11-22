@@ -19,4 +19,17 @@ Commands:
 !attach <filename> <terms> - Uploads a file to the server with specified filename. It gets sent to anyone that follows a term in <terms>. For example, if 
 user bob follows the term apple, and the command typed is !attach file.txt apple, the file will get sent to anyone following the term apple. In this case, it would be bob.
 
+Messages are only sent to users that:
+
+- Follow the user who sent the message
+    Ex: If user bob follows user Jon, and Jon sends the message "Hi!", bob would receieve that message.
+- Follow a term within the message
+    Ex: If user bob sends a message containing the term "apple" and user jon follows the term "apple", then jon would receieve the message
+- Receieve an @ in the message
+    Ex: IF user bob sends the message "Hi @jon". Jon would receieve the message.
+Users will only receieve a message once. This means that if the user is following mutiple terms within a message or if the user is following a term and receieves an @ in the message, they will not receieve mutiple instances of the same message for each followed term/@. 
+
+Special Cases: 
+- Messages sent with the @all tag will get sent to all users except the user who sent it.
+
 
